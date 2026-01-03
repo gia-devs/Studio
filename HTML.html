@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="GALERY.html">GALERY</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="HOME.html">HOME</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <article><p><span class="orange">Sintaxis:</span> Los elementos HTML se escriben con los símbolos <span class="orange">< ></span>. La mayor parte requieren una etiqueta de cierre, que se escribe con <span class="orange"> / </span>.<br><br> Ejemplo: <span class="orange"><span><</span>etiqueta><span><</span>/etiqueta></span>. <br><br>Las etiquetas que no necesitan cierre, como <span class="orange"><span><</span>img></span> o <span class="orange"><span><</span>br></span>, pueden verse a veces escritas con la barra al final. Ejemplo: <span class="orange"><span><</span>br /></span>. Esto no es incorrecto, pero tampoco es necesario.<br><br>Algunas etiquetas HTML tienen valor semántico (normalmente relacionado con la importancia de unas palabras por encima de otras). Esto permite a los navegadores y buscadores comprender mejor los contenidos e identificar las palabras más relevantes.<br><br>Las etiquetas HTML se pueden escribir indistintamente en mayúsculas o minúsculas, aunque lo habitual es escribirlas en minúsculas. El navegador ignora las tabulaciones y saltos de página, por lo que podemos emplearlos para dar formato a nuestro código.<br><br>Podemos introducir comentarios en nuestro código (o comentar parte del código y que no se muestre en el navegador). <span class="orange"><span><</span>!-- comentario en HTML --></span>.</p></article>         
+            <h3>ETIQUETAS DE DOCUMENTO</h3>
+            <article><p><span><</span>!<span class="orange">DOCTYPE</span> html> Indica al navegador que la web sigue los estándares y debe ser renderizada como tal. Se pone al principio del documento html y no se cierra.</p></article>        
+            <article><p><<span class="orange">head</span>>...<span><</span>/<span class="orange">head</span>> Etiqueta con información para el navegador diferente del contenido: título de la página, hoja de estilos, codificado, etc.</p></article>      
+            <article><p><<span class="orange">meta</span> <span class="blue">charset</span>=<span class="green">"uft-8"</span>> Codificación de la página. Se pone dentro de la etiqueta head para indicar al navegador en qué codificación están los caracteres especiales. La más habitual y que suelen tener por defecto los editores de código es <span class="green">UFT-8</span>.</p><p>Existe una forma de escribir los caracteres especiales para que sean interpretados correctamente siempre. Se llama “escapar caracteres”, y van precedidos de un <span class="orange">&</span> y acabados en <span class="orange">;</span> . Por ejemplo, una ñ se escribiría <span class="orange"><span>&</span>ntilde;</span> y se mostraría en el navegador como ñ. Por esta razón, el & debe siempre escribirse en HTML “escapado”: <span class="orange"><span>&</span>amp;</span> Puedes ver más caracteres escapados en <a href="http://www.html-entities.org/">http://www.html-entities.org/</a></p></article>
+            <article><p><span class="orange">meta</span> <span class="blue">name</span>=<span class="green">"viewport"</span> <span class="blue">contend</span>=<span class="green">"width=device-width, initial-scale=1.0"></span></p><p>Etiqueta necesaria para que un navegador móvil renderice una página responsive correctamente.</p></article>
+            <article><p><<span class="orange">title</span>>...<span><</span>/<span class="orange">title</span>> Título de la página, que suele figurar en los resultados de búsqueda o en la pestaña del navegador.</p></article>
+            <article><p><span class="orange">Vincular una hoja de estilos</span>: Una hoja de estilos se vincula desde la etiqueta <span>head</span> con la etiqueta <span>link</span>, de esta manera:</p><br><p><span class="ejemplos"><<span class="orange">link</span><span class="blue"> rel</span>=<span class="green">"stylesheet"</span><span class="blue"> href</span>=<span class="green">"style.css"</span></span></p></article>       
+            <article><p><<span class="orange">html</span>>...<span><</span>/<span class="orange">html</span>> Etiqueta que engloba el resto del documento.</p></article>      
+            <article><p><<span class="orange">body</span>>...<span><</span>/<span class="orange">body</span>> Contenido (normalmente texto e imágenes) de la página.</p></article>        
+            <h3>ETIQUETAS DE BLOQUE</h3>       
+            <article><p><<span class="orange">div</span>>...<span><</span>/<span class="orange">div</span>> Etiqueta sin valor semántico que nos permite agrupar bloques.</p></article>        
+            <article><p><<span class="orange">ul</span>>...<span><</span>/<span class="orange">li</span>> Etiqueta de listado no ordenado. Solo puede contener elementos de lista (<<span class="orange">li</span>>)</p></article>      
+            <article><p><<span class="orange">ol</span>>...<span><</span>/<span class="orange">ol</span>> Etiqueta de listado ordenado. Solo puede contener elementos de lista (<<span class="orange">li</span>>).</p></article>
+            <article><p><<span class="orange">li</span>>...<span><</span>/<span class="orange">li</span>> Etiqueta de elemento de lista. Puede contener cualquier tipo de elemento html.</p></article>
+            <h3>ETIQUETAS DE TEXTO</h3>    
+            <article><p><span><<span class="orange">p</span>> ... <span><</span>/<span class="orange">p</span>></span> Marca un párrafo.</p></article>
+            <article><p><span><<span class="orange">br</span>> Marca un salto de línea. No requiere de cierre.</p></article>        
+            <article><p><span><<span class="orange">h1</span>> ... <span><</span>/<span class="orange">h1</span>></span> Marca un encabezado de primer nivel. Solo puede haber uno por página.</p></article>      
+            <article><p><span><<span class="orange">em</span>> ... <span><</span>/<span class="orange">em</span>></span> Etiqueta semántica para hacer énfasis en una palabra en particular. Normalmente se renderiza como una cursiva.</p></article>       
+            <article><p><span><<span class="orange">strong</span>> ... <span><</span>/<span class="orange">strong</span>></span> Etiqueta semántica para indicar la relevancia en un texto de una palabra en particular. Normalmente se renderiza como una negrita.</p></article>        
+            <article><p><span><<span class="orange">span</span>> ... <span><</span>/<span class="orange">span</span>></span> Etiqueta sin valor semántico que sirve para acotar trozos de texto.</p></article>      
+            <h3>ETIQUETAS DE IMÁGENES</h3>        
+            <article><p><span class="orange">Rutas de archivo</span>: Cuando hacemos referencia a un archivo (imagen, enlace…), ponemos el nombre del archivo (con la extensión si la tiene) y la carpeta o carpetas en las que pueda estar respecto al HTML desde el que se le llama, separadas por / . Si se debe subir uno o varios niveles de carpetas para acceder al archivo, se indica con dos puntos. <br> Ejemplo: <span class="green">../../imagenes/elemento.jpg</span></p></article>        
+            <article><p><span><<span class="orange">img</span>></span> Etiqueta de imagen, el atributo <span class="blue">src</span> indica la ruta del archivo, y el <span class="blue">alt</span> es el texto alternativo.</p><br><p><span class="ejemplos"><span><</span><span class="orange">img</span><span class="blue"> src</span>=<spa class="green">"..."</spa> <span class="blue">alt</span>=<span class="green">"..."</span>></span></p></article>        
+            <h3>ETIQUETAS DE ENLACES</h3>        
+            <article><p><span><<span class="orange">a</span>>...<span><</span>/<span class="orange">a</span>></span> Etiqueta de enlace, el atributo <span class="blue">href</span> indica la página de destino. Puede ser a un archivo dentro del propio dominio, o a otro dominio (si es a otro, hay que poner la URL completa. con <span class="green">http://</span>).<br><br> Un enlace puede ser a una sección de la misma página, marcada con un <span class="blue">id</span>. En ese caso, el href empezará con <span class="blue">#</span> y el valor del id. Para abrir un enlace en una ventana nueva, añadiremos el atributo <span class="blue">target</span>=<span class="green">"_blank"</span>.</p><br><p><span class="ejemplos"><span><</span><span class="orange">a</span><span class="blue"> href</span>=<spa class="green">"..."</spa><span>> ... <</span>/<span class="orange">a</span>></span></p></article>        
+            <article><p><span><span><</span><span class="orange">a</span> <span class="blue">href</span>=<span class="green">"mailto:@email.com"</span>> ... <span><</span>/<span class="orange">a</span>></span> El protocolo mailto: se emplea para lanzar nuevo mensaje en un programa de correo electrónico a una dirección en concreto.</p></article>        
+            <article><p><span><span><</span><span class="orange">a</span> <span class="blue">href</span>=<span class="green">"tel:+1 234567890"</span>> ... <span><</span>/<span class="orange">a</span>></span> El protocolo tel: se emplea para activar cualquier programa de telefonía que pueda existir en el dispositivo (aplicación de teléfono, Skype, etc).</p></article>        
+            <h3>ATRIBUTOS PARA LAS ETIQUETAS HTML</h3>    
+            <article><p><span class="orange">Sintaxis</span>: Los atributos se escriben en la etiqueta de apertura de un elemento, después del nombre. Se pueden escribir varios atributos separados por espacios. La forma de asignar un valor a un atributo es con el símbolo = y el valor entre comillas. No puede haber espacios entre el atributo y el =, o entre el = y las comillas.</p></article>       
+            <article><p><span class="blue">class</span>=<span class="green">"..."</span> Asigna una o más clases a un elemento html. Si hay más de una clase, se separan con espacios.</p><br><p><span class="ejemplos"><span><</span><span class="orange">etiqueta</span> <span class="blue">class</span>=<span class="green">"valor"</span>> ... <span><</span>/<span class="orange">etiqueta</span>></span></p></article>         
+            <article><p><span class="blue">id</span>=<span class="green">"..."</span> Asigna un identificador único a un elemento html. Un elemento no puede tener más de un id, y no puede haber dos elementos con el mismo id.</p><br><p><span class="ejemplos"><span><</span><span class="orange">etiqueta</span> <span class="blue">id</span>=<span class="green">"valor"</span>> ... <span><</span>/<span class="orange">etiqueta</span>></span></p></article>            
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
