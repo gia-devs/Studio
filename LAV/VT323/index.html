@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VT323 SYSTEM - ARCADE EDITION</title>
+
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- FONDO MATRIX GRIS -->
+<canvas id="matrixCanvas"></canvas>
+
+<main>
+<section class="pixel-grid">
+
+  <article class="article_7 panel">
+    <div class="window">
+      <div class="window-bar">DISTRIBUCIÓN</div>
+      <div class="window-content">Google Fonts</div>
+    </div>
+  </article>
+
+  <article class="article_9 panel">
+    <div class="window">
+      <div class="window-bar">ABOUT</div>
+      <div class="window-content">Inspirada en terminales VT (1970–80)</div>
+    </div>
+  </article>
+
+  <article class="article_1 panel">
+    <div class="window">
+      <div class="window-bar">
+        <p>CARACTERÍSTICAS</p>
+        <p>X</p>
+      </div>
+      <div class="window-content">
+        <p>Sans-serif · Monoespaciada</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="article_4 panel">
+    <div class="window">
+      <div class="window-bar">
+        <p><span class="blink">VT323 SYSTEM</span></p>
+        <p id="highScoreDisplay">RECORD: 0</p>
+      </div>
+      <div class="window-content center-content">
+        <p>PIXEL DISPLAY TYPEFACE</p>
+        <h1>VT323</h1>
+      </div>
+    </div>
+  </article>
+
+  <article class="article_2 panel active border">
+    <div class="window">
+      <div class="window-bar">
+        <p>MAPA</p>
+        <p>X</p>
+      </div>
+      <div class="window-content map" id="mapa">
+        <div id="player"></div>
+
+        <!-- GLYPHS -->
+        <div class="glyph" data-info="DISPLAY PRINCIPAL CARGADO"></div>
+        <div class="glyph" data-info="CARACTERÍSTICAS ANALIZADAS"></div>
+        <div class="glyph" data-info="STATS TIPOGRÁFICOS DETECTADOS"></div>
+        <div class="glyph" data-info="VARIANTS DISPONIBLES"></div>
+        <div class="glyph" data-info="SYSTEM LOG ACTIVADO"></div>
+        <div class="glyph" data-info="DISTRIBUCIÓN: GOOGLE FONTS"></div>
+        <div class="glyph" data-info="AUTOR: PETER HULL"></div>
+        <div class="glyph" data-info="AÑO DE LANZAMIENTO: 2013"></div>
+        <div class="glyph" data-info="INSPIRADA EN EL DEC VT220"></div>
+        <div class="glyph" data-info="1 SOLO PESO: REGULAR"></div>
+        <div class="glyph" data-info="LICENCIA: OPEN FONT LICENSE"></div>
+        <div class="glyph" data-info="USO IDEAL: UI RETRO Y CRT"></div>
+
+        <div class="alarm-overlay" id="alarmOverlay">
+          <p class="alarm-text" id="alarmTitle">⚠ COLISIÓN DETECTADA ⚠</p>
+          <button id="restartBtn">REINICIAR SISTEMA</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="article_8 panel">
+    <div class="window">
+      <div class="window-bar">AUTOR</div>
+      <div class="window-content">Peter Hull</div>
+    </div>
+  </article>
+
+  <article class="article_5 panel active">
+    <div class="window">
+      <div class="window-bar">
+        <p>SYSTEM</p>
+        <p>X</p>
+      </div>
+      <div class="window-content" id="infoText">
+        <p>▶ SISTEMA APAGADO<br>▶ USA LAS FLECHAS</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="article_6 panel log">
+    <div class="window">
+      <div class="window-bar">SYSTEM LOG</div>
+      <div class="window-content" id="log"></div>
+    </div>
+  </article>
+
+  <article class="article_3 panel">
+    <div class="window">
+      <div class="window-bar">STATS</div>
+      <div class="window-content">Regular · CRT · UI</div>
+    </div>
+  </article>
+
+</section>
+
+<!-- CONTROLES TÁCTILES MÓVILES (D-PAD) -->
+<div class="touch-controls">
+  <button class="t-btn" id="btnUp">▲</button>
+  <div class="t-row">
+    <button class="t-btn" id="btnLeft">◀</button>
+    <button class="t-btn" id="btnRight">▶</button>
+  </div>
+  <button class="t-btn" id="btnDown">▼</button>
+</div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

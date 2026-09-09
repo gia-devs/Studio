@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXO 2 — Navigation System</title>
+    <link rel="stylesheet" href="exo2.css">
+</head>
+<body>
+    <canvas id="starfield"></canvas>
+
+    <header>
+        <div class="system-id">
+            <strong>EXO-02</strong>
+            <small>TYPE SYSTEM</small>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#type">01 TYPE</a></li>
+                <li><a href="#origin">02 ORIGIN</a></li>
+                <li><a href="#specimen">03 SPECIMEN</a></li>
+                <li><a href="#system">04 SYSTEM</a></li>
+            </ul>
+        </nav>
+        <div class="coordinates">
+            <small>COORD</small>
+            <span>X 018.32 / Y 073.14 / Z 042.08</span>
+        </div>
+        <div class="system-status">
+            <span class="status-dot">●</span>
+            <small>SYSTEM ONLINE</small>
+        </div>
+    </header>
+
+    <main>
+        <aside class="aside-left">
+            <div class="panel-group">
+                <h2>Classification</h2>
+                <div class="stat">
+                    <p>Sans Serif</p>
+                    <div class="bar"><span style="width: 90%;"></span></div>
+                    <small>90%</small>
+                </div>
+            </div>
+            <div class="panel-group">
+                <h2>Characteristics</h2>
+                <div class="stat">
+                    <p>Geometric</p>
+                    <div class="bar"><span style="width: 90%;"></span></div>
+                    <small>90%</small>
+                </div>
+                <div class="stat">
+                    <p>Humanist</p>
+                    <div class="bar"><span style="width: 30%;"></span></div>
+                    <small>30%</small>
+                </div>
+                <div class="stat">
+                    <p>Rounded</p>
+                    <div class="bar"><span style="width: 60%;"></span></div>
+                    <small>60%</small>
+                </div>
+            </div>
+            <div class="panel-group">
+                <h2>Available Weights</h2>
+                <div class="stat">
+                    <p>100–900</p>
+                    <div class="bar"><span style="width: 100%;"></span></div>
+                    <small>100%</small>
+                </div>
+            </div>
+        </aside>
+
+        <section class="display">
+            <h1 id="mainTitle" class="glitch" data-text="EXO 2">EXO 2</h1>
+        </section>
+
+        <aside class="aside-right">
+            <div class="panel-group">
+                <h2>Style</h2>
+                <div class="stat">
+                    <p>Futuristic</p>
+                    <div class="bar"><span style="width: 95%;"></span></div>
+                    <small>95%</small>
+                </div>
+                <div class="stat">
+                    <p>Technological</p>
+                    <div class="bar"><span style="width: 90%;"></span></div>
+                    <small>90%</small>
+                </div>
+                <div class="stat">
+                    <p>Scientific</p>
+                    <div class="bar"><span style="width: 75%;"></span></div>
+                    <small>75%</small>
+                </div>
+            </div>
+            <div class="panel-group">
+                <h2>Usage</h2>
+                <div class="stat">
+                    <p>Interfaces</p>
+                    <div class="bar"><span style="width: 95%;"></span></div>
+                    <small>95%</small>
+                </div>
+                <div class="stat">
+                    <p>Technology</p>
+                    <div class="bar"><span style="width: 90%;"></span></div>
+                    <small>90%</small>
+                </div>
+                <div class="stat">
+                    <p>Text</p>
+                    <div class="bar"><span style="width: 70%;"></span></div>
+                    <small>70%</small>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <!-- 1. Size Control -->
+        <div class="panel size-panel">
+            <div class="control-group">
+                <label for="sizeRange">SIZE</label>
+                <div class="slider-wrapper">
+                    <input id="sizeRange" type="range" min="12" max="160" value="72">
+                </div>
+                <div class="value-display">
+                    <span id="sizeValue">72</span><small>px</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Clear + Case -->
+        <div class="panel utility-panel">
+            <div class="case-toggle">
+                <button class="case-btn active" data-case="upper" type="button">ABC</button>
+                <button class="case-btn" data-case="lower" type="button">abc</button>
+            </div>
+        </div>
+
+        <!-- 3. Symbols -->
+        <div class="panel keys-panel symbols-panel">
+            <span data-key="@">@</span>
+            <span data-key="#">#</span>
+            <span data-key="$">$</span>
+            <span data-key="%">%</span>
+            <span data-key="&">&</span>
+            <span data-key="1">1</span>
+            <span data-key="2">2</span>
+            <span data-key="3">3</span>
+            <span data-key="4">4</span>
+            <span data-key="5">5</span>
+            <span data-key="6">6</span>
+            <span data-key="7">7</span>
+            <span data-key="8">8</span>
+            <span data-key="9">9</span>
+            <span data-key="0">0</span>
+        </div>
+
+        <div class="panel style-panel">
+            <button id="clearBtn" class="utility-btn" type="button">CLEAR</button>
+        </div>
+
+        <!-- 5. Alphabet -->
+        <div class="panel keys-panel alphabet-panel">
+            <span data-key="A">A</span>
+            <span data-key="B">B</span>
+            <span data-key="C">C</span>
+            <span data-key="D">D</span>
+            <span data-key="E">E</span>
+            <span data-key="F">F</span>
+            <span data-key="G">G</span>
+            <span data-key="H">H</span>
+            <span data-key="I">I</span>
+            <span data-key="J">J</span>
+            <span data-key="K">K</span>
+            <span data-key="L">L</span>
+            <span data-key="M">M</span>
+            <span data-key="N">N</span>
+            <span data-key="O">O</span>
+            <span data-key="P">P</span>
+            <span data-key="Q">Q</span>
+            <span data-key="R">R</span>
+            <span data-key="S">S</span>
+            <span data-key="T">T</span>
+            <span data-key="U">U</span>
+            <span data-key="V">V</span>
+            <span data-key="W">W</span>
+            <span data-key="X">X</span>
+            <span data-key="Y">Y</span>
+            <span data-key=" " class="space-key">SPACE</span>
+            <span data-key="Z">Z</span>
+        </div>
+
+        <!-- 6. Weight Control -->
+        <div class="panel weight-panel">
+            <div class="range-info">
+                <small>100</small>
+                <strong id="weightValue">400</strong>
+                <small>900</small>
+            </div>
+            <input id="weightRange" type="range" min="100" max="900" step="1" value="400">
+        </div>
+
+        <!-- 7. Italic -->
+        <div class="panel style-panel">
+            <button class="style-option" data-style="italic" type="button">ITALIC</button>
+        </div>
+
+        <!-- 8. Normal -->
+        <div class="panel style-panel">
+            <button class="style-option active" data-style="normal" type="button">NORMAL</button>
+        </div>
+
+        <!-- 9. Typographic Map -->
+        <div class="panel map-panel">
+            <canvas id="starMap"></canvas>
+            <div class="map-center">
+                <small>TYPOGRAPHIC</small>
+                <strong>MAP</strong>
+                <small>SYSTEM</small>
+            </div>
+            <div class="map-data">
+                <span id="orbitStatus">ORBIT STABLE</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="exo2.js"></script>
+    <script src="canvas.js"></script>
+    
+</body>
+</html>
